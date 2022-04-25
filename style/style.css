@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&family=Shalimar&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/*/////////////////////////////
+///////// ENCABEZADO ////////// 
+/////////////////////////// */
+.header {
+    background-color: rgb(185, 43, 43);
+    height: 180px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+    padding: 70px 20px 20px 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.img-logo {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: 142px;
+    width: 200px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*//////////////////////////////////
+////// BARRA DE NAVEGACIÓN /////////
+//////////////////////////////////*/
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(110, 110, 110);
+}
+
+.ul-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.li-nav {
+    margin: 10px;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(7, 70, 150);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+    color: rgb(24, 253, 24);
+    font-size: 24px;
+    transition: 300ms;
+}
+
+/*/////////////////////////////////////////
+////// SECCIÓN PRINCIPAL (INICIO) /////////
+////////////////////////////////////////*/
+
+main {
+    background-image: url(../imagenes/fondo.png);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 28px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(185, 43, 43);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.presentacion-ecomerce {
+    padding: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lorem-parrafo {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 20px;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-img {
+    display: flex;
+    width: 900px;
+    height: auto;
+    margin: 20px;
+}
+
+.img-computadora {
+    width: 100%;
+}
+
+aside {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Mono', monospace;
+    padding: 20px;
+    background-color: rgb(15, 16, 16);
+}
+
+/*///////////////////////////////////////////
+///// FOOTER  (COPYRIGHT Y REDES) //////////
+//////////////////////////////////////////*/
+
+footer {
+    text-align: center;
+    font-size: 18px;
+    background-color: rgb(7, 70, 150);
+    padding: 20px;
+    color: rgb(155, 143, 143);
+}
+
+.redes-footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.redes-footer a:hover {
+    color: rgb(24, 253, 24);
+}
+/*//////////////////////////////////////
+///// APLICANDO GRID AL INDEX /////////
+//////////////////////////////////// */
+.section-grid-item {
+    grid-area: section;
+}
+aside {
+    grid-area: aside;
+}
+
+.grid-main {
+    display: grid;
+    min-height: 100%;
+    grid-template: 
+    "section aside" auto/
+    auto auto
+    ;
+}
+/*/////////////////////////////////////////////////
+///// RESPONSIVE (SECCÓN PRINCIPAL:INICIO) ///////
+/////////////////////////////////////////////////*/
+@media screen and (max-width: 1350px) { 
+    h1{
+        font-size: 35px;
+    }
+    
+    .img-logo {
+        height: 100px;
+        width: 145px;
+    }
+    
+    .li-nav {
+        margin: 5px;
+        width: 145px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .grid-main {
+        grid-template: 
+    "section" auto
+    "aside"   auto /
+    100%
+    ;
+    }
+    .section-img {
+        width: auto;
+    }
+}
+@media screen and (max-width: 800px) {
+    .img-logo {
+        height: 90px;
+        width: 125px;
+    }
+    .header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .li-nav {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+    }
+} 
+@media screen and (max-width: 650px) {
+    h1 {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .img-logo {
+        height: 70px;
+        width: 110px;
+    }
+
+    .ul-nav {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        height: auto;
+        padding: 10px;
+    }
+
+    .li-nav {
+        width: 300px;
+        height: 50px;
+    }
+
+    aside h2 {
+        font-size: 22px;
+    }
+
+    .iframe {
+        width: 280px;
+        height: auto;
+    }
+
+    .redes-footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .redes-footer a {
+        padding: 20px;
+    }
+}
+
+/*////////////////////////////////
+////// ARMA TU PC.HTML //////////
+////////////////////////////////*/
+
+.h3-procesadores {
+    text-align: center;
+    padding: 40px 0px 30px 0px;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h3-procesadores a {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-intel-amd {
+    border: 3px solid rgb(185, 43, 43);
+    padding: 20px;
+    margin: 25px;
+    width: 280px;
+    height: 220px;
+}
+
+/*///////////////////////////
+///// PRODUCTOS.HTML ///////
+///////////////////////////*/
+
+.h2-productos {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 250px;
+    height: 280px;
+    border: 3px solid black;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+}
+
+article:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+
+}
+
+article h2 {
+    color: rgb(185, 43, 43);
+    padding: 3px;
+    font-family: sans-serif;
+}
+
+article p {
+    text-align: center;
+}
+
+.procesadores-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*////////////////////////////////
+////// QUIENES SOMOS.HTML ////////
+////////////////////////////////*/
+
+.quienes-somos {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 40px;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    
+}
+
+.quienes-somos p {
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    width: 50%;
+    display: inline-block;
+    justify-content: center;
+}
+
+.img-quienes-somos {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border: 3px solid rgb(185, 43, 43);
+}
+/*//////////////////////////////////////////////////
+///// APLICANDO GRID A "QUIENES SOMOS.HTML" ///////
+/////////////////////////////////////////////////*/
+
+.header {
+    grid-area: header;
+}
+
+.nav-menu {
+    grid-area: nav-menu;
+}
+
+.quienes-somos {
+    grid-area: quienes-somos;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.grid-conteiner-quienes-somos {
+    display: grid;
+    min-height: 100%;
+    grid-template: 
+    "header"        auto
+    "nav-menu"      auto
+    "quienes-somos" auto
+    "footer"        auto /
+    auto
+    ;
+}
+
+/*////////////////////////////////////
+///// RESPONSIVE QUIENES SOMOS //////
+///////////////////////////////// */
+
+@media screen and (max-width: 700px) { 
+    .quienes-somos p {
+        font-size: 20px;
+    }
+}
+
+/*////////////////////////////////////
+//////// CONTACTANOS.HTML ////////////
+////// (FORMULARIO DE CONTACTO) //////
+////////////////////////////////////*/
+
+.body-form {
+    background-color: rgb(0, 0, 0);
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+fieldset {
+    border: 10px outset rgb(180, 180, 180);
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(0, 0, 0);
+    width: auto;
+}
+
+legend {
+    padding: 20px;
+    text-align: center;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+}
+
+input {
+    display: flex;
+    margin: auto;
+    padding: 15px;
+    box-shadow: 0px 0px 15px red;
+}
+
+textarea {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: 25px 0px;
+    font-size: 16px;
+    text-align: justify;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px red;
+    width: 100%;
+
+}
+
+.boton-form {
+    background-color: rgb(7, 70, 150);
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 15px white;
+}
+
+.boton-form:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/*///////////////////////////////////
+///// RESPONSIVE FORMULARIO ////////
+//////////////////////////////// */
+
+@media screen and (max-width: 600px) {
+    label {
+        display: flex;
+        justify-content: flex-start;
+        margin: 12px;
+    }
+    input {
+        margin: 10px;
+    }
+    .boton-form {
+        margin: auto;
+    }
+}
