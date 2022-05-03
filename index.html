@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagenes/icono.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Modificaciones CSS -->
     <link rel="stylesheet" href="./style/style.css">
     <title>Tienda de Hardware</title>
-    <link rel="icon" href="./imagenes/icono.png">
 </head>
 <body>
-
+    <!-- Encabezado (Título e Img Logo) -->
     <header class="header">
         <h1>Tienda Informática X</h1>
         <div class="img-logo">
@@ -17,6 +20,7 @@
         </div>
     </header>
     
+    <!-- Barra deNavegacion -->
     <nav class="nav-menu">
         <ul class="ul-nav">
             <li class="li-nav"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -26,16 +30,54 @@
             <li class="li-nav"><a class="nav-link" href="./pages/contactanos.html">Contáctanos</a></li>
         </ul>
     </nav>
-
+    <!-- Grid Container -->
     <main class="grid-main">
         <section>
             <h2>Encontrá lo que buscas al mejor precio</h2>
-            <p class="presentacion-ecomerce">En tienda informática vas a encotnrar lo ultimo en hardware, al mejor precio de argentina.</p>
+            <h3 class="presentacion-ecomerce">En tienda informática vas a encotnrar lo ultimo en hardware, al mejor precio de argentina.</h3>
+            <!-- <div class="lorem-parrafo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minus iusto eius optio natus mollitia dolore? Repellendus quo incidunt quidem maxime reiciendis sapiente possimus asperiores! Exercitationem, at hic quibusdam necessitatibus nemo blanditiis pariatur itaque culpa sint quaerat animi voluptas assumenda perspiciatis, provident placeat. Nihil atque voluptates culpa nostrum perspiciatis ipsum ex iste, corrupti quidem voluptatem similique maiores, dolorum dignissimos facilis officiis at accusantium eligendi repellendus eius est. Rerum sunt temporibus possimus, ex nostrum ut magni nulla, mollitia perferendis suscipit aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente eos dolorum corporis, veniam assumenda omnis enim non maiores rerum inventore provident repellendus explicabo natus aut voluptas qui iusto ullam at vero ipsam voluptates harum! Quia enim aperiam suscipit odit.</p>
+            </div> -->
+            <!-- <div class="section-img">
+                <img class="img-computadora" src="./imagenes/hardware.png" alt="hardwaregamer">
+            </div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-11 col-lg-11 col-xl-11 my-3 mx-auto">
+                        <!-- Carrusel de Fotos -->
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Imagen carrusel uno -->
+                                <div class="carousel-item active">
+                                        <img src="./imagenes/carrusel-1-video.png" class="d-block w-100" alt="placas-de-video-potentes">
+                                </div>
+                                <!-- Imagen carrusel dos -->
+                                <div class="carousel-item">
+                                        <img src="./imagenes/carrusel-2-base.png" class="d-block w-100" alt="placas-madre-potentes">
+                                </div>
+                                <!-- Imagen carrusel tres -->
+                                <div class="carousel-item">
+                                        <img src="./imagenes/carrusel-3-intel.png" class="d-block w-100" alt="procesadores-intel">
+                                </div>
+                                <!-- Imagen carrusel cuatro -->
+                                <div class="carousel-item">
+                                    <img src="./imagenes/carrusel-4-amd.png" class="d-block w-100" alt="procesadores-AMD">
+                                </div>
+                                <!-- Imagen carrusel cinco -->
+                                <div class="carousel-item">
+                                    <img src="./imagenes/carrusel-5-perifericos.png" class="d-block w-100" alt="pefirericos-gamer-hyper-x">
+                                </div>
+                                <!-- Imagen carrusel seis -->
+                                <div class="carousel-item">
+                                    <img src="./imagenes/carrusel-6-sillas.png" class="d-block w-100" alt="silla-gamer-ryzer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="lorem-parrafo">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minus iusto eius optio natus mollitia dolore? Repellendus quo incidunt quidem maxime reiciendis sapiente possimus asperiores! Exercitationem, at hic quibusdam necessitatibus nemo blanditiis pariatur itaque culpa sint quaerat animi voluptas assumenda perspiciatis, provident placeat. Nihil atque voluptates culpa nostrum perspiciatis ipsum ex iste, corrupti quidem voluptatem similique maiores, dolorum dignissimos facilis officiis at accusantium eligendi repellendus eius est. Rerum sunt temporibus possimus, ex nostrum ut magni nulla, mollitia perferendis suscipit aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente eos dolorum corporis, veniam assumenda omnis enim non maiores rerum inventore provident repellendus explicabo natus aut voluptas qui iusto ullam at vero ipsam voluptates harum! Quia enim aperiam suscipit odit.</p>
-            </div>
-            <div class="section-img">
-                <img class="img-computadora" src="./imagenes/hardware.png" alt="hardwaregamer">
             </div>
         </section>
         <aside>
@@ -54,5 +96,7 @@
         </div>
         <h4>Copyright, todos los derechos reservados</h4>
     </footer>
+    <!-- Importando Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

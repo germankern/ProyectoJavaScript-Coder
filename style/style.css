@@ -93,9 +93,9 @@ h1 {
     color: rgb(255, 255, 255);
 }
 
-nav a:hover {
+.nav-link:hover {
     color: rgb(24, 253, 24);
-    font-size: 24px;
+    font-size: 22px;
     transition: 300ms;
 }
 
@@ -530,3 +530,4 @@ textarea {
         margin: auto;
     }
 }
+
