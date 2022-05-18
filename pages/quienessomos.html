@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <title>Tienda de Hardware</title>
+    <!-- Mejorando SEO -->
+    <meta name="description" content="importadores de hadware">
+    <meta name="keywords" content="importadores,hardware, perifericos, procesadores, ventas, productos informaticos, hardware pc, HTML, CSS, SCSS, SASS,">
+    <!-- Titulo -->
+    <title>Tienda Hardware: Importadores</title>
+    <!-- Icono -->
     <link rel="icon" href="../imagenes/icono.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Modificaciones CSS -->
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-<body class="grid-conteiner-quienes-somos" >
-
+<body class="body-quienes-somos" >
+    <!-- ENCABEZADO -->
     <header class="header">
         <h1>Tienda Informática X</h1>
         <div class="img-logo">
             <a href="../index.html"><img class="logo" src="../imagenes/amd-intel.png" alt="icono-tienda"></a>
         </div>
     </header>
-
+    <!-- Barra de Navegacion -->
     <nav class="nav-menu">
         <ul class="ul-nav">
             <li class="li-nav"><a class="nav-link" href="../index.html">Inicio</a></li>
@@ -26,15 +34,59 @@
             <li class="li-nav"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
         </ul>
     </nav>
-
-    <div class="quienes-somos">
-        <h2>Importadores Top 1 en Ventas</h2>
-        <p>Somos <b>Tienda Informática X</b> los importadores mas grandes de argentina, la página de ventas de hardware mejor posicionada en google. Tenemos el respaldo de las marcas numero uno de la industria, ya que trabajamos en conjunto para traerles lo mejor.</p>
-        <div>
-            <img class="img-quienes-somos" src="../imagenes/ventas.png" alt="carrito de ventas">
+    <!-- CARRUSEL -->
+    <div class="col-9 mx-auto my-5">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- IMAGEN UNO CARRUSEL -->
+                <div class="carousel-item active">
+                    <img src="../imagenes/ventas-1.png" class="d-block w-100" alt="ilustrativa-carrito-de-ventas-online">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Importadores Top 1 en Ventas de Argentina</h5>
+                    <p class="fw-bolder">Contamos con el stock mas grande de Hardware y con el precio mas competitivo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam distinctio dolorum maxime eum laudantium, veniam cupiditate minus.</p>
+                    </div>
+                </div>
+                <!-- IMAGEN DOS CARRUSEL -->
+                <div class="carousel-item">
+                    <img src="../imagenes/ventas-2.png" class="d-block w-100" alt="smarphone-con-fondo-de-carrito-de-ventas">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>70% de las Ventas son Mobile</h5>
+                    <p class="fw-bolder">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque id veritatis ad quidem commodi totam delectus debitis quibusdam accusamus magnam possimus sunt expedita ipsam omnis placeat iure dicepe eius.</p>
+                    </div>
+                </div>
+                <!-- IMAGEN TRES CARRUSEL -->
+                <div class="carousel-item">
+                    <img src="../imagenes/ventas-3.png" class="d-block w-100" alt="deposito-de-harware-ordenado">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text-carrusel">El Deposito de Hardware mas Grande de AmericaLatina</h5>
+                    <p class="fw-bolder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ad voluptate, quibusdam velit sunt ratione, rerum exercitationem autem, tenetur modi cumque fugit! Veniam suscip, nobius voluptas ipsa..</p>
+                    </div>
+                </div>
+            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+        </div>
+        <div class="text-hidden">
+            <h2>Importadores Top 1 en Ventas de Argentina</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus excepturi porro provident non fugit tenetur dolores, error consequuntur architecto doloremque reiciendis natus unde ex dolore id sequi eligendi iure?</p>
+            <h2>70% de las Ventas son Mobile</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus excepturi porro provident non fugit tenetur dolores, error consequuntur architecto doloremque reiciendis natus unde ex dolore id sequi eligendi iure?</p>
+            <h2>El Deposito de Hardware mas Grande de AmericaLatina</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus excepturi porro provident non fugit tenetur dolores, error consequuntur architecto doloremque reiciendis natus unde ex dolore id sequi eligendi iure?</p>
         </div>
     </div>
-
+    <!-- FOOTER -->
     <footer class="footer" >
         <div class="redes-footer">
             <a href="https://www.instagram.com/german_kern/" target="_blank">Instagram</a>
@@ -43,5 +95,7 @@
         </div>
         <h4>Copyright, todos los derechos reservados</h4>
     </footer>
+    <!-- Importando Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
