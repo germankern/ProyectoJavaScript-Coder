@@ -1,549 +1,368 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&family=Shalimar&display=swap');
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&family=Shalimar&display=swap");
+.body-form .formulario form .boton-form {
+  background-color: #074696;
+  font-size: 18px;
+  color: #fafafa;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 0px 0px 15px #fafafa; }
 
+.header .img-logo a .logo, .container-productos article .procesadores-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+/* TIPOGRAFIA */
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
 
 /*/////////////////////////////
 ///////// ENCABEZADO ////////// 
 /////////////////////////// */
-
 .header {
-    background-color: rgb(185, 43, 43);
-    height: 180px;
-    background: linear-gradient(45deg,red,black, red,black,red,black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    color: rgb(255, 255, 255);
+  height: 180px;
+  background: linear-gradient(45deg, red, black, red, black, red, black);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .header h1 {
+    color: #fafafa;
     font-size: 40px;
     padding: 5px 12px;
     margin: 0;
     font-family: 'Roboto Mono', monospace, sans-serif;
-    box-shadow: 0px 0px 12px 5px rgba(255, 255, 255, 0.8);
-}
-
-.img-logo {
+    box-shadow: 0px 0px 12px 5px rgba(255, 255, 255, 0.8); }
+  .header .img-logo {
     display: flex;
     position: absolute;
     top: 10px;
     left: 20px;
     height: 142px;
     width: 200px;
-    box-shadow: 0px 0px 15px white;
-}
-
-.logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    box-shadow: 0px 0px 15px #fafafa; }
 
 /*//////////////////////////////////
 ////// BARRA DE NAVEGACIÓN /////////
 //////////////////////////////////*/
-
 .nav-menu {
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    width: 100%;
-    background-color: rgb(110, 110, 110);
-    animation-name: fondoheader;
-    animation-duration: 7s;
-    animation-delay: 1.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  background-color: #6e6e6e;
+  animation-name: fondoheader;
+  animation-duration: 7s;
+  animation-delay: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
 
 @keyframes fondoheader {
-    0%    {background-color: rgb(180, 180, 0)}
-    25%   {background-color: rgb(00, 90, 0);}
-    50%   {background-color: rgb(0, 0, 255);}
-    75%   {background-color: rgb(110, 110, 110);}
-    100%  {background-color: rgb(255, 0, 180);}
-}
-
-.ul-nav {
+  0% {
+    background-color: #b4b400; }
+  25% {
+    background-color: #005a00; }
+  50% {
+    background-color: blue; }
+  75% {
+    background-color: #6e6e6e; }
+  100% {
+    background-color: #ff00b4; } }
+  .nav-menu .ul-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    /* Solucion a Bootstrap que me rompia el Nav 1 */
     margin: 0;
-    padding: 0;
-}
+    padding: 0; }
+    .nav-menu .ul-nav .li-nav {
+      margin: 10px;
+      width: 180px;
+      height: 50px;
+      background-color: #074696;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      border: 1px solid #000500;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px #fafafa; }
+      .nav-menu .ul-nav .li-nav .nav-link {
+        text-decoration: none;
+        color: #fafafa;
+        padding: 0px; }
+        .nav-menu .ul-nav .li-nav .nav-link:hover {
+          color: #18fd18;
+          font-size: 20px;
+          transition: 300ms;
+          box-shadow: 0px 6px 3px #000500; }
 
-.li-nav {
-    margin: 10px;
-    width: 180px;
-    height: 50px;
-    background-color: rgb(7, 70, 150);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px white;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    /* Solucion a Bootstrap 2*/
-    padding: 0px;
-}
-
-.nav-link:hover {
-    color: rgb(24, 253, 24);
-    font-size: 20px;
-    transition: 300ms;
-    box-shadow: 0px 6px 3px black;
-}
-
-/*/////////////////////////////////////////
-////// SECCIÓN PRINCIPAL (INICIO) /////////
-////////////////////////////////////////*/
-
+/* /////////////////////////
+//// SECCIÓN PRINCIPAL ////
+////////////////////////*/
 main {
-    background-image: url(../imagenes/fondo.png);
-}
-
-section {
+  background-image: url(../imagenes/fondo.png); }
+  main section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-section h2 {
-    font-size: 28px;
+    align-items: center; }
+    main section h2 {
+      font-size: 28px;
+      text-align: center;
+      padding: 20px;
+      color: #b92b2b;
+      font-family: 'Roboto Mono', monospace; }
+    main section .presentacion-ecomerce {
+      padding: 10px;
+      text-align: center;
+      color: #fafafa;
+      font-family: Arial, Helvetica, sans-serif; }
+    main section .lorem-parrafo {
+      color: #fafafa;
+      padding: 10px;
+      margin: 20px;
+      text-align: justify;
+      font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  main aside {
     text-align: center;
-    padding: 20px;
-    color: rgb(185, 43, 43);
+    color: #fafafa;
     font-family: 'Roboto Mono', monospace;
-}
+    padding: 20px; }
+    main aside h3 {
+      margin-top: 25px; }
 
-.presentacion-ecomerce {
-    padding: 10px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.lorem-parrafo {
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    margin: 20px;
-    text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.section-img {
-    display: flex;
-    width: 900px;
-    height: auto;
-    margin: 20px;
-}
-
-.img-computadora {
-    width: 100%;
-}
+/*//////////////////////////////////////
+///// APLICANDO GRID AL INDEX /////////
+//////////////////////////////////// */
+.section-grid-item {
+  grid-area: section; }
 
 aside {
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-family: 'Roboto Mono', monospace;
-    padding: 20px;
-}
+  grid-area: aside; }
 
-aside h3 {
-    margin-top: 25px;
-}
+.grid-main {
+  display: grid;
+  min-height: 100%;
+  grid-template: "section aside" auto/ 70% 30%; }
+
+/* ////////////////////
+//// RESPONSIVE //////
+////////////////// */
+@media screen and (max-width: 1300px) {
+  .header h1 {
+    font-size: 35px; }
+  .header .img-logo {
+    height: 100px;
+    width: 145px; }
+  .nav-menu .ul-nav .li-nav {
+    margin: 5px;
+    width: 150px;
+    height: 50px;
+    font-size: 16px; }
+  .grid-main {
+    grid-template: "section" auto "aside"   auto / 100%; } }
+
+/* responsive 800px */
+@media screen and (max-width: 800px) {
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px; }
+    .header .img-logo {
+      height: 90px;
+      width: 125px; }
+  .nav-menu .ul-nav .li-nav {
+    width: 120px;
+    height: 40px;
+    font-size: 16px; } }
+
+/* responsive 650px */
+@media screen and (max-width: 650px) {
+  .header {
+    padding-bottom: 30px; }
+    .header h1 {
+      font-size: 25px;
+      margin: 0; }
+    .header .img-logo {
+      height: 70px;
+      width: 110px; }
+  .nav-menu {
+    height: auto;
+    padding: 10px; }
+    .nav-menu .ul-nav {
+      flex-direction: column; }
+      .nav-menu .ul-nav .li-nav {
+        width: 300px;
+        height: 50px; }
+  footer .redes-footer {
+    display: flex;
+    flex-direction: column; }
+    footer .redes-footer a {
+      padding: 20px;
+      transition: linear 4s 1000ms; } }
+
+/* responsive 400px */
+@media screen and (max-width: 400px) {
+  aside .iframe {
+    width: 290px;
+    height: auto; } }
 
 /*///////////////////////////////////////////
 ///// FOOTER  (COPYRIGHT Y REDES) //////////
 //////////////////////////////////////////*/
-
 footer {
-    text-align: center;
-    font-size: 18px;
-    background-color: rgb(7, 70, 150);
-    padding: 20px;
-    color: rgb(155, 143, 143);
-}
-
-.redes-footer a {
+  text-align: center;
+  font-size: 18px;
+  background-color: #074696;
+  padding: 20px;
+  color: #b4b4b4; }
+  footer .redes-footer a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-}
-
-.redes-footer a:hover {
-    color: rgb(24, 253, 24);
-
-}
-/*//////////////////////////////////////
-///// APLICANDO GRID AL INDEX /////////
-//////////////////////////////////// */
-
-.section-grid-item {
-    grid-area: section;
-}
-
-aside {
-    grid-area: aside;
-}
-
-.grid-main {
-    display: grid;
-    min-height: 100%;
-    grid-template: 
-    "section aside" auto/
-    70% 30%
-    ;
-}
-/*/////////////////////////////////////////////////
-///// RESPONSIVE (SECCÓN PRINCIPAL:INICIO) ///////
-/////////////////////////////////////////////////*/
-
-@media screen and (max-width: 1300px) { 
-    h1{
-        font-size: 35px;
-    }
-    
-    .img-logo {
-        height: 100px;
-        width: 145px;
-    }
-    
-    .li-nav {
-        margin: 5px;
-        width: 150px;
-        height: 50px;
-        font-size: 16px;
-    }
-    .grid-main {
-        grid-template: 
-    "section" auto
-    "aside"   auto /
-    100%
-    ;
-    }
-    .section-img {
-        width: auto;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .img-logo {
-        height: 90px;
-        width: 125px;
-    }
-    .header {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding-bottom: 10px;
-    }
-    
-    .li-nav {
-        width: 120px;
-        height: 40px;
-        font-size: 16px;
-    }
-} 
-
-@media screen and (max-width: 650px) {
-    .header {
-        padding-bottom: 30px;
-    }
-
-    h1 {
-        font-size: 25px;
-        margin: 0;
-    }
-
-    .img-logo {
-        height: 70px;
-        width: 110px;
-    }
-
-    .ul-nav {
-        flex-direction: column;
-    }
-
-    .nav-menu {
-        height: auto;
-        padding: 10px;
-    }
-
-    .li-nav {
-        width: 300px;
-        height: 50px;
-    }
-
-    aside h2 {
-        font-size: 22px;
-    }
-
-    .redes-footer {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .redes-footer a {
-        padding: 20px;
-        transition: linear 4s 1000ms;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .iframe {
-        width: 290px;
-        height: auto;
-    }
-}
+    color: #fafafa;
+    padding: 10px; }
+    footer .redes-footer a:hover {
+      color: #18fd18; }
 
 /*////////////////////////////////
 ////// ARMA TU PC.HTML //////////
 ////////////////////////////////*/
-
 .h3-procesadores {
-    text-align: center;
-    padding: 40px 0px 30px 0px;
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.h3-procesadores a {
+  text-align: center;
+  padding: 40px 0px 30px 0px;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif; }
+  .h3-procesadores .anchor-amd-intel {
     display: inline-block;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: center; }
+    .h3-procesadores .anchor-amd-intel .option-intel-amd {
+      border: 3px solid #b92b2b;
+      padding: 20px;
+      margin: 25px;
+      width: 280px;
+      height: 220px; }
 
-.option-intel-amd {
-    border: 3px solid rgb(185, 43, 43);
-    padding: 20px;
-    margin: 25px;
-    width: 280px;
-    height: 220px;
-}
-
-/*///////////////////////////
-///// PRODUCTOS.HTML ///////
-///////////////////////////*/
-
+/* ///////////////////////
+//// PRODUCTOS.HTML /////
+////////////////////// */
 .h2-productos {
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif; }
 
 .container-productos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .container-productos article {
     width: 250px;
     height: 280px;
-    border: 3px solid black;
+    border: 3px solid #000500;
     margin: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    font-size: 20px;
-}
+    font-size: 20px; }
+    .container-productos article:hover {
+      color: #fafafa;
+      background-color: #000500; }
+    .container-productos article h2 {
+      color: #b92b2b;
+      padding: 3px;
+      font-family: sans-serif; }
+    .container-productos article p {
+      text-align: center; }
 
-article:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-}
+.body-quienes-somos {
+  background-color: #000500; }
 
-article h2 {
-    color: rgb(185, 43, 43);
-    padding: 3px;
-    font-family: sans-serif;
-}
+/* CARRUSEL */
+.carousel-inner .carousel-item h5 {
+  font-family: 'Roboto Mono', monospace, sans-serif;
+  font-size: 24px;
+  color: #fafafa;
+  background-color: rgba(10, 9, 9, 0.407);
+  padding: 5px; }
 
-article p {
-    text-align: center;
-}
+.carousel-inner .carousel-item p {
+  font-size: 20px;
+  color: #fafafa;
+  background-color: rgba(10, 9, 9, 0.407);
+  border: 1px solid #b92b2b;
+  border-radius: 5px; }
 
-.procesadores-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* Texto Oculto */
+.text-hidden {
+  display: none; }
 
-/*////////////////////////////////
-////// QUIENES SOMOS.HTML ////////
-////////////////////////////////*/
+/* RESPONSIVE 600px */
+@media screen and (max-width: 750px) {
+  .text-hidden {
+    display: block; }
+    .text-hidden h2 {
+      color: #b92b2b; }
+    .text-hidden p {
+      color: #fafafa; } }
 
-.quienes-somos {
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 40px;
-    color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-}
-
-.quienes-somos p {
-    padding: 10px;
-    margin: 20px;
-    font-size: 20px;
-    width: 50%;
-    display: inline-block;
-    justify-content: center;
-}
-
-.img-quienes-somos {
-    width: 500px;
-    height: 350px;
-    object-fit: cover;
-    border: 3px solid rgb(185, 43, 43);
-}
-
-
-/*//////////////////////////////////////////////////
-///// APLICANDO GRID A "QUIENES SOMOS.HTML" ///////
-/////////////////////////////////////////////////*/
-
-.header {
-    grid-area: header;
-}
-
-.nav-menu {
-    grid-area: nav-menu;
-}
-
-.quienes-somos {
-    grid-area: quienes-somos;
-}
-
-.footer {
-    grid-area: footer;
-}
-
-.grid-conteiner-quienes-somos {
-    display: grid;
-    min-height: 100%;
-    grid-template: 
-    "header"        auto
-    "nav-menu"      auto
-    "quienes-somos" auto
-    "footer"        auto /
-    auto
-    ;
-}
-
-/*////////////////////////////////////
-///// RESPONSIVE QUIENES SOMOS //////
-///////////////////////////////// */
-
-@media screen and (max-width: 700px) { 
-    .quienes-somos p {
-        font-size: 20px;
-    }
-}
-
-/*////////////////////////////////////
-//////// CONTACTANOS.HTML ////////////
+/*/////////////////////////////////////
+/////////// CONTACTANOS.HTML //////////
 ////// (FORMULARIO DE CONTACTO) //////
 ////////////////////////////////////*/
-
 .body-form {
-    background-color: rgb(0, 0, 0);
-}
-
-.formulario {
+  background-color: #000500; }
+  .body-form .formulario {
     display: flex;
     justify-content: center;
-    margin: 30px;
-}
+    margin: 30px; }
+    .body-form .formulario form fieldset {
+      border: 10px outset #b4b4b4;
+      padding: 15px;
+      color: #fafafa;
+      font-size: 22px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: #000500;
+      width: auto; }
+    .body-form .formulario form legend {
+      padding: 20px;
+      text-align: center; }
+    .body-form .formulario form label {
+      display: flex;
+      justify-content: center;
+      margin: 12px; }
+    .body-form .formulario form input {
+      display: flex;
+      margin: auto;
+      padding: 15px;
+      box-shadow: 0px 0px 15px #b92b2b; }
+    .body-form .formulario form div textarea {
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      margin: 25px 0px;
+      font-size: 16px;
+      text-align: justify;
+      border-radius: 15px;
+      box-shadow: 0px 0px 15px #b92b2b;
+      width: 100%; }
+    .body-form .formulario form .boton-form:hover {
+      background-color: #fafafa;
+      color: #000500;
+      cursor: pointer; }
 
-fieldset {
-    border: 10px outset rgb(180, 180, 180);
-    padding: 15px;
-    color: rgb(255, 255, 255);
-    font-size: 22px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(0, 0, 0);
-    width: auto;
-}
-
-legend {
-    padding: 20px;
-    text-align: center;
-}
-
-label {
-    display: flex;
-    justify-content: center;
-    margin: 12px;
-}
-
-input {
-    display: flex;
-    margin: auto;
-    padding: 15px;
-    box-shadow: 0px 0px 15px red;
-}
-
-textarea {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    margin: 25px 0px;
-    font-size: 16px;
-    text-align: justify;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px red;
-    width: 100%;
-}
-
-.boton-form {
-    background-color: rgb(7, 70, 150);
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    border-radius: 15px;
-    margin-top: 15px;
-    box-shadow: 0px 0px 15px white;
-}
-
-.boton-form:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-}
-
-/*///////////////////////////////////
-///// RESPONSIVE FORMULARIO ////////
-//////////////////////////////// */
-
+/* RESPONSIVE 600PX */
 @media screen and (max-width: 600px) {
-    label {
-        display: flex;
-        justify-content: flex-start;
-        margin: 12px;
-    }
-    input {
-        margin: 10px;
-    }
-    .boton-form {
-        margin: auto;
-    }
-}
-
+  .formulario form label {
+    display: flex;
+    justify-content: flex-start;
+    margin: 12px; }
+  .formulario form input {
+    margin: 10px; }
+  .formulario form div .boton-form {
+    margin: auto; } }

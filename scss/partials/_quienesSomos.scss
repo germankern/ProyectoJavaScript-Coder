@@ -1,0 +1,40 @@
+.body-quienes-somos {
+    background-color: $black;
+}
+/* CARRUSEL */
+.carousel-inner {
+    .carousel-item {
+        h5 {
+            font-family: 'Roboto Mono', monospace, sans-serif;
+            font-size: 24px;
+            color: $white;
+            background-color: rgba(10, 9, 9, 0.407);
+            padding: 5px;
+        }
+        p {
+            font-size: 20px;
+            color: $white;
+            background-color: rgba(10, 9, 9, 0.407);
+            border: 1px solid $red;
+            border-radius: 5px;
+            
+        }
+    }
+}
+/* Texto Oculto */
+.text-hidden {
+    display: none;
+}
+
+/* RESPONSIVE 600px */
+@media screen and (max-width: 750px) {
+    .text-hidden {
+        display: block;
+        h2 {
+            color: $red;
+        }
+        p {
+            color: $white;
+        }
+    }
+}

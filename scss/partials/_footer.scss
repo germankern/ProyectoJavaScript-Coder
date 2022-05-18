@@ -1,0 +1,23 @@
+/*///////////////////////////////////////////
+///// FOOTER  (COPYRIGHT Y REDES) //////////
+//////////////////////////////////////////*/
+footer {
+    text-align: center;
+    font-size: 18px;
+    background-color: $blue;
+    padding: 20px;
+    color: $grey;
+    .redes-footer {
+        a {
+            text-decoration: none;
+            color: $white;
+            padding: 10px;
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+}
+
+
+

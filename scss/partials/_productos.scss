@@ -1,0 +1,49 @@
+/* ///////////////////////
+//// PRODUCTOS.HTML /////
+////////////////////// */
+
+.h2-productos {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    article {
+        width: 250px;
+        height: 280px;
+        border: 3px solid $black;
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 20px;
+        &:hover {
+            color: $white;
+            background-color: $black;
+        }
+        .procesadores-img {
+            @extend %imgCover;
+        }
+        h2 {
+            color: $red;
+            padding: 3px;
+            font-family: sans-serif;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
