@@ -2,22 +2,63 @@
 ///// FOOTER  (COPYRIGHT Y REDES) //////////
 //////////////////////////////////////////*/
 footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     font-size: 18px;
     background-color: $blue;
-    padding: 20px;
+    padding: 20px 5px;
     color: $grey;
     .redes-footer {
+        margin: 18px 10px;
         a {
             text-decoration: none;
             color: $white;
-            padding: 10px;
+            margin: 0px 12px;
             &:hover {
                 color: $green;
+            }
+            .icon-footer {
+                width: 35px;
+                height: 35px;
+                margin: 5px;
+                vertical-align: middle;
+                box-shadow: 0px 0px 5px $white;
+                border-radius: 8px;
+            }
+        }
+    }
+    .wp-link {
+        text-decoration: none;
+        color: $white;
+        background-color: green;
+        border: 1px $white;
+        border-radius: 8px;
+        padding: 5px;
+        &:hover {
+            box-shadow: 0px 0px 5px $white;
+        }
+    }
+    .p-developer {
+        font-size: 16px;
+        margin: 12px 0px 8px;
+    }
+    h4 {
+        font-size: 16px;
+        font-weight: 500;
+        color: $grey;
+    }
+}
+/* responsive 650px */
+@media screen and (max-width: 650px) {
+    footer {
+        .redes-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            a {
+                padding: 15px 15px 15px 65px;
+                transition: linear 4s 1000ms;
             }
         }
     }
 }
-
-
-

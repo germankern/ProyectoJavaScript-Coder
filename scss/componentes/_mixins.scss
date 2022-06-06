@@ -1,0 +1,13 @@
+@mixin flexItems ($disp,$fDir,$justC,$alignI) {
+    display: $disp;
+    flex-direction: $fDir;
+    justify-content: $justC;
+    align-items: $alignI;
+}
+
+@mixin flexRowWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}

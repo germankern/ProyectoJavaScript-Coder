@@ -11,7 +11,7 @@
         margin: 30px;
         form {
             fieldset {
-                border: 10px outset $grey;
+                border: 6px outset $grey;
                 padding: 15px;
                 color: $white;
                 font-size: 22px;
@@ -20,7 +20,7 @@
                 width: auto;
             }
             legend {
-                padding: 20px;
+                padding: 16px;
                 text-align: center;
             }
             label {
@@ -32,7 +32,7 @@
                 display: flex;
                 margin: auto;
                 padding: 15px;
-                box-shadow: 0px 0px 15px $red;
+                box-shadow: 0px 0px 15px $green;
             }
             div {
                 textarea {
@@ -45,38 +45,30 @@
                     border-radius: 15px;
                     box-shadow: 0px 0px 15px $red;
                     width: 100%;
+                    resize: none;
                 }
             }
             .boton-form {
                 @extend %botonBlue;
                 &:hover {
-                        background-color: $white;
-                        color: $black;
+                        box-shadow: 0px 0px 15px $green;
                         cursor: pointer;
                 }
             }
         }
     }
-}
-
-/* RESPONSIVE 600PX */
-@media screen and (max-width: 600px) {
-    .formulario {
-        form {
-            label {
-                display: flex;
-                justify-content: flex-start;
-                margin: 12px;
-            }
-            input {
-                margin: 10px;
-            }
-            div {
-                .boton-form {
-                    margin: auto;
-                }
-            }
+    .map-ubicacion {
+        @include flexItems(flex,column,center,center);
+        margin: 40px 0px;
+        h3 {
+            color: $white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        iframe {
+            width: 300px;
+            height: 210px;
+            margin: 5px 0px;
         }
     }
 }
-

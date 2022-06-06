@@ -1,5 +1,12 @@
 @charset "UTF-8";
+/* Tipografía */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&family=Shalimar&display=swap");
+/* Reseteo */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
 .body-form .formulario form .boton-form {
   background-color: #074696;
   font-size: 18px;
@@ -13,12 +20,6 @@
   height: 100%;
   object-fit: cover; }
 
-/* TIPOGRAFIA */
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box; }
-
 /*/////////////////////////////
 ///////// ENCABEZADO ////////// 
 /////////////////////////// */
@@ -31,6 +32,8 @@
   .header h1 {
     color: #fafafa;
     font-size: 40px;
+    font-weight: bold;
+    line-height: normal;
     padding: 5px 12px;
     margin: 0;
     font-family: 'Roboto Mono', monospace, sans-serif;
@@ -40,9 +43,12 @@
     position: absolute;
     top: 10px;
     left: 20px;
-    height: 142px;
+    height: 130px;
     width: 200px;
-    box-shadow: 0px 0px 15px #fafafa; }
+    box-shadow: 0px 0px 15px #fafafa;
+    border-radius: 10%; }
+    .header .img-logo a .logo {
+      border-radius: 10%; }
 
 /*//////////////////////////////////
 ////// BARRA DE NAVEGACIÓN /////////
@@ -82,22 +88,27 @@
       width: 180px;
       height: 50px;
       background-color: #074696;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 18px;
       border: 1px solid #000500;
       border-radius: 20px;
       box-shadow: 0px 0px 20px #fafafa; }
       .nav-menu .ul-nav .li-nav .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-decoration: none;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-radius: 20px;
         color: #fafafa;
+        width: 100%;
+        height: 100%;
         padding: 0px; }
         .nav-menu .ul-nav .li-nav .nav-link:hover {
-          color: #18fd18;
-          font-size: 20px;
+          font-size: 22px;
           transition: 300ms;
-          box-shadow: 0px 6px 3px #000500; }
+          color: #18fd18;
+          background: rgba(0, 0, 0, 0.448);
+          box-shadow: 0px 2px 10px #000500; }
 
 /* /////////////////////////
 //// SECCIÓN PRINCIPAL ////
@@ -107,6 +118,7 @@ main {
   main section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center; }
     main section h2 {
       font-size: 28px;
@@ -120,11 +132,13 @@ main {
       color: #fafafa;
       font-family: Arial, Helvetica, sans-serif; }
     main section .lorem-parrafo {
+      background-color: rgba(0, 0, 0, 0.4);
       color: #fafafa;
       padding: 10px;
       margin: 20px;
       text-align: justify;
-      font-family: Verdana, Geneva, Tahoma, sans-serif; }
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 800; }
   main aside {
     text-align: center;
     color: #fafafa;
@@ -168,8 +182,8 @@ aside {
 @media screen and (max-width: 800px) {
   .header {
     display: flex;
-    align-items: flex-end;
     justify-content: center;
+    align-items: flex-end;
     padding-bottom: 10px; }
     .header .img-logo {
       height: 90px;
@@ -196,13 +210,7 @@ aside {
       flex-direction: column; }
       .nav-menu .ul-nav .li-nav {
         width: 300px;
-        height: 50px; }
-  footer .redes-footer {
-    display: flex;
-    flex-direction: column; }
-    footer .redes-footer a {
-      padding: 20px;
-      transition: linear 4s 1000ms; } }
+        height: 50px; } }
 
 /* responsive 400px */
 @media screen and (max-width: 400px) {
@@ -214,36 +222,79 @@ aside {
 ///// FOOTER  (COPYRIGHT Y REDES) //////////
 //////////////////////////////////////////*/
 footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   font-size: 18px;
   background-color: #074696;
-  padding: 20px;
+  padding: 20px 5px;
   color: #b4b4b4; }
-  footer .redes-footer a {
+  footer .redes-footer {
+    margin: 18px 10px; }
+    footer .redes-footer a {
+      text-decoration: none;
+      color: #fafafa;
+      margin: 0px 12px; }
+      footer .redes-footer a:hover {
+        color: #18fd18; }
+      footer .redes-footer a .icon-footer {
+        width: 35px;
+        height: 35px;
+        margin: 5px;
+        vertical-align: middle;
+        box-shadow: 0px 0px 5px #fafafa;
+        border-radius: 8px; }
+  footer .wp-link {
     text-decoration: none;
     color: #fafafa;
-    padding: 10px; }
-    footer .redes-footer a:hover {
-      color: #18fd18; }
+    background-color: green;
+    border: 1px #fafafa;
+    border-radius: 8px;
+    padding: 5px; }
+    footer .wp-link:hover {
+      box-shadow: 0px 0px 5px #fafafa; }
+  footer .p-developer {
+    font-size: 16px;
+    margin: 12px 0px 8px; }
+  footer h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #b4b4b4; }
+
+/* responsive 650px */
+@media screen and (max-width: 650px) {
+  footer .redes-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    footer .redes-footer a {
+      padding: 15px 15px 15px 65px;
+      transition: linear 4s 1000ms; } }
 
 /*////////////////////////////////
 ////// ARMA TU PC.HTML //////////
 ////////////////////////////////*/
 .h3-procesadores {
-  text-align: center;
-  padding: 40px 0px 30px 0px;
-  font-size: 28px;
-  font-family: Arial, Helvetica, sans-serif; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .h3-procesadores h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #b92b2b;
+    margin: 25px 8px 10px 8px; }
   .h3-procesadores .anchor-amd-intel {
-    display: inline-block;
-    align-items: center;
-    justify-content: center; }
-    .h3-procesadores .anchor-amd-intel .option-intel-amd {
+    margin: 20px auto; }
+    .h3-procesadores .anchor-amd-intel .opcion-intel-amd {
       border: 3px solid #b92b2b;
-      padding: 20px;
-      margin: 25px;
       width: 280px;
-      height: 220px; }
+      height: 220px;
+      padding: 15px; }
+      .h3-procesadores .anchor-amd-intel .opcion-intel-amd:hover {
+        box-shadow: 0px 2px 15px;
+        transition: 800ms; }
 
 /* ///////////////////////
 //// PRODUCTOS.HTML /////
@@ -252,8 +303,10 @@ footer {
   display: flex;
   justify-content: center;
   padding-top: 40px;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 28px;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-weight: 800;
+  color: #b92b2b; }
 
 .container-productos {
   display: flex;
@@ -261,35 +314,53 @@ footer {
   justify-content: center;
   flex-wrap: wrap; }
   .container-productos article {
-    width: 250px;
-    height: 280px;
-    border: 3px solid #000500;
-    margin: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    width: 250px;
+    height: 320px;
+    border: 2px solid #000500;
+    margin: 40px;
     font-size: 20px; }
     .container-productos article:hover {
       color: #fafafa;
       background-color: #000500; }
-    .container-productos article h2 {
+    .container-productos article h3 {
       color: #b92b2b;
       padding: 3px;
-      font-family: sans-serif; }
+      font-family: sans-serif;
+      font-size: 25px; }
     .container-productos article p {
       text-align: center; }
+    .container-productos article p strong {
+      font-size: 22px; }
+    .container-productos article .envio {
+      color: #00800b;
+      font-weight: 900; }
+    .container-productos article .ver-mas {
+      display: inline-block;
+      width: 50%;
+      text-decoration: none;
+      text-align: center;
+      margin: 3px;
+      padding: 10px;
+      background-color: #074696;
+      color: #fafafa; }
+      .container-productos article .ver-mas:hover {
+        background-color: #075a96; }
 
 .body-quienes-somos {
   background-color: #000500; }
 
 /* CARRUSEL */
-.carousel-inner .carousel-item h5 {
+.carousel-inner .carousel-item h2 {
   font-family: 'Roboto Mono', monospace, sans-serif;
   font-size: 24px;
+  font-weight: 800;
   color: #fafafa;
   background-color: rgba(10, 9, 9, 0.407);
-  padding: 5px; }
+  padding: 2px; }
 
 .carousel-inner .carousel-item p {
   font-size: 20px;
@@ -298,15 +369,22 @@ footer {
   border: 1px solid #b92b2b;
   border-radius: 5px; }
 
+.text-informativo {
+  margin: 16px 0px; }
+  .text-informativo h3 {
+    color: #b92b2b; }
+  .text-informativo p {
+    color: #fafafa; }
+
 /* Texto Oculto */
 .text-hidden {
   display: none; }
 
 /* RESPONSIVE 600px */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
   .text-hidden {
     display: block; }
-    .text-hidden h2 {
+    .text-hidden h3 {
       color: #b92b2b; }
     .text-hidden p {
       color: #fafafa; } }
@@ -322,7 +400,7 @@ footer {
     justify-content: center;
     margin: 30px; }
     .body-form .formulario form fieldset {
-      border: 10px outset #b4b4b4;
+      border: 6px outset #b4b4b4;
       padding: 15px;
       color: #fafafa;
       font-size: 22px;
@@ -330,7 +408,7 @@ footer {
       background-color: #000500;
       width: auto; }
     .body-form .formulario form legend {
-      padding: 20px;
+      padding: 16px;
       text-align: center; }
     .body-form .formulario form label {
       display: flex;
@@ -340,7 +418,7 @@ footer {
       display: flex;
       margin: auto;
       padding: 15px;
-      box-shadow: 0px 0px 15px #b92b2b; }
+      box-shadow: 0px 0px 15px #18fd18; }
     .body-form .formulario form div textarea {
       display: flex;
       justify-content: center;
@@ -350,19 +428,22 @@ footer {
       text-align: justify;
       border-radius: 15px;
       box-shadow: 0px 0px 15px #b92b2b;
-      width: 100%; }
+      width: 100%;
+      resize: none; }
     .body-form .formulario form .boton-form:hover {
-      background-color: #fafafa;
-      color: #000500;
+      box-shadow: 0px 0px 15px #18fd18;
       cursor: pointer; }
-
-/* RESPONSIVE 600PX */
-@media screen and (max-width: 600px) {
-  .formulario form label {
+  .body-form .map-ubicacion {
     display: flex;
-    justify-content: flex-start;
-    margin: 12px; }
-  .formulario form input {
-    margin: 10px; }
-  .formulario form div .boton-form {
-    margin: auto; } }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px; }
+    .body-form .map-ubicacion h3 {
+      color: #fafafa;
+      font-family: sans-serif;
+      text-align: center; }
+    .body-form .map-ubicacion iframe {
+      width: 300px;
+      height: 210px;
+      margin: 5px 0px; }

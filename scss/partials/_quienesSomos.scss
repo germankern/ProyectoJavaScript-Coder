@@ -4,12 +4,13 @@
 /* CARRUSEL */
 .carousel-inner {
     .carousel-item {
-        h5 {
+        h2 {
             font-family: 'Roboto Mono', monospace, sans-serif;
             font-size: 24px;
+            font-weight: 800;
             color: $white;
             background-color: rgba(10, 9, 9, 0.407);
-            padding: 5px;
+            padding: 2px;
         }
         p {
             font-size: 20px;
@@ -17,8 +18,16 @@
             background-color: rgba(10, 9, 9, 0.407);
             border: 1px solid $red;
             border-radius: 5px;
-            
         }
+    }
+}
+.text-informativo {
+    margin: 16px 0px;
+    h3 {
+        color: $red;
+    }
+    p {
+        color: $white;
     }
 }
 /* Texto Oculto */
@@ -27,10 +36,10 @@
 }
 
 /* RESPONSIVE 600px */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
     .text-hidden {
         display: block;
-        h2 {
+        h3 {
             color: $red;
         }
         p {

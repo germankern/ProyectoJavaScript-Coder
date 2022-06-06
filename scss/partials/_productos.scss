@@ -6,23 +6,19 @@
     display: flex;
     justify-content: center;
     padding-top: 40px;
-    font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: $red;
 }
 .container-productos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include flexRowWrap;
     article {
+        @include flexItems (flex,column,flex-end,center);
         width: 250px;
-        height: 280px;
-        border: 3px solid $black;
+        height: 320px;
+        border: 2px solid $black;
         margin: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
         font-size: 20px;
         &:hover {
             color: $white;
@@ -31,13 +27,34 @@
         .procesadores-img {
             @extend %imgCover;
         }
-        h2 {
+        h3 {
             color: $red;
             padding: 3px;
             font-family: sans-serif;
+            font-size: 25px;
         }
         p {
             text-align: center;
+        }
+        p strong {
+            font-size: 22px;
+        }
+        .envio {
+            color: rgb(0, 128, 11);
+            font-weight: 900;
+        }
+        .ver-mas {
+            display: inline-block;
+            width: 50%;
+            text-decoration: none;
+            text-align: center;
+            margin: 3px;
+            padding: 10px;
+            background-color: $blue;
+            color: $white;
+            &:hover {
+                background-color: rgb(7, 90, 150);
+            }
         }
     }
 }

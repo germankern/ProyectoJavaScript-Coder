@@ -3,22 +3,26 @@
 ////////////////////////////////*/
 
 .h3-procesadores {
+    @include flexItems (flex,column,center,center);
     text-align: center;
-    padding: 40px 0px 30px 0px;
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
+    h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+        color: $red;
+        margin: 25px 8px 10px 8px;
+    }
     .anchor-amd-intel {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-        .option-intel-amd {
+    margin: 20px auto;
+        .opcion-intel-amd {
             border: 3px solid $red;
-            padding: 20px;
-            margin: 25px;
             width: 280px;
             height: 220px;
+            padding: 15px;
+            &:hover {
+                box-shadow: 0px 2px 15px;
+                transition: 800ms;
+            }
         }
     }
 }
-
-

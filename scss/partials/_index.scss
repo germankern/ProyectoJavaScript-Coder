@@ -5,9 +5,7 @@
 main {
     background-image: url(../imagenes/fondo.png);
     section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexItems (flex,column,center,center);
         h2 {
             font-size: 28px;
             text-align: center;
@@ -22,11 +20,13 @@ main {
             font-family: Arial, Helvetica, sans-serif;
         }
         .lorem-parrafo {
+            background-color: rgba(0, 0, 0, 0.4);
             color: $white;
             padding: 10px;
             margin: 20px;
             text-align: justify;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 800;
         }
     }
     aside {
@@ -95,8 +95,8 @@ aside {
 @media screen and (max-width: 800px) {
     .header {
         display: flex;
-        align-items: flex-end;
         justify-content: center;
+        align-items: flex-end;
         padding-bottom: 10px;
         .img-logo {
             height: 90px;
@@ -135,16 +135,6 @@ aside {
             .li-nav {
                 width: 300px;
                 height: 50px;
-            }
-        }
-    }
-    footer {
-        .redes-footer {
-            display: flex;
-            flex-direction: column;
-            a {
-                padding: 20px;
-                transition: linear 4s 1000ms;
             }
         }
     }
