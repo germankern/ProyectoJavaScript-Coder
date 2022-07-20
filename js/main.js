@@ -141,3 +141,39 @@ const textoCarrito = generarTextoDelCarrito()
 const total = obtenerTotal()
 
 alert("Tu carrito es:\n" + textoCarrito + "\nEl total es: $" + total)
+
+// const containerProductos = document.getElementsByClassName('container-productos')
+// const resultadoCarrito = document.getElementById('carrito')
+
+
+// const mostrarCarrito = () => {
+//     containerProductos.style.display = "none";
+//     carrito.forEach((dato) => {
+//         const li = document.createElement('li')
+//         li.innerHTML = `Tu carrito es ${dato}`
+//         carrito.appendChild(li)
+//     });
+// }
+
+// const productosEnCarrito = ['Ryzen 7', 'Ryzen 5', 'Ryzen 3', 'Intel i5', 'Intel i7'];
+// const resultadoCarrito = document.getElementById('carrito');
+
+// productosEnCarrito.forEach((dato) => {
+//     const li = document.createElement('li')
+//     li.innerHTML = `Tu carrito es ${dato}`
+//     carrito.append(li)
+// });
+
+const tiposProcesadores = carrito;
+const listaProcesadores = document.getElementById('lista-carrito');
+
+tiposProcesadores.forEach((dato) => {
+    const li = document.createElement('li')
+    li.innerHTML = `Tu carrito es ${dato} ${textoCarrito} y cuesta $" ${total}`
+    li.className = "success"
+    listaProcesadores.appendChild(li)    
+})
+
+console.log(carrito);
+
+
