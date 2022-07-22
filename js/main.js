@@ -169,7 +169,7 @@ const listaProcesadores = document.getElementById('lista-carrito');
 
 tiposProcesadores.forEach((dato) => {
     const li = document.createElement('li')
-    li.innerHTML = `Tu carrito es ${dato} ${textoCarrito} y cuesta $" ${total}`
+    li.innerHTML = `Tu carrito es ${JSON.stringify(dato)} ${textoCarrito} y cuesta $" ${total}`
     li.className = "success"
     listaProcesadores.appendChild(li)    
 })
