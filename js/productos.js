@@ -66,11 +66,12 @@ function pintandoListado() {
     let aux = '';
     for(let i = 0; i < productos.length; i++){
         
-        aux = aux + `<div style="cursor: pointer; margin: 85px; border: 5px solid; padding: 16px; font-size: 22px; text-align: center; background-color: lightblue" 
-                            onclick="agregarAlCarrito(
-                                {id: ${productos[i].id}, nombre: '${productos[i].nombre}', precio: ${productos[i].precio}})">
+        aux = aux + `<div style="margin: 85px; border: 5px solid; padding: 16px; font-size: 22px; text-align: center; background-color: lightblue">
                         <h3>${productos[i].nombre}</h3>
                         <p>$ ${productos[i].precio}</p>
+                        <button style="cursor: pointer; padding: 8px; margin-top: 22px; "
+                            onclick="agregarAlCarrito(
+                                {nombre: '${productos[i].nombre}', precio: ${productos[i].precio}})">Agregar al carro</button>
                     </div>`;
     }
     // Ejemplo de DOM (acá lo "pintamos" en el DOM)
