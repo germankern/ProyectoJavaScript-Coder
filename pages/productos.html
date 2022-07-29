@@ -1,157 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Mejorando SEO -->
-    <meta name="description" content="productos hardware computacion">
-    <meta name="keywords" content="hardware, perifericos, procesadores, armando pc, ventas, HTML, CSS, SCSS, SASS,productos informaticos, hardware pc">
+    <meta name="description" content="productos hardware computacion" />
+    <meta
+      name="keywords"
+      content="hardware, perifericos, procesadores, armando pc, ventas, HTML, CSS, SCSS, SASS,productos informaticos, hardware pc"
+    />
     <!-- Titulo -->
     <title>Tienda Hardware: Productos</title>
     <!-- Icono -->
-    <link rel="icon" href="../imagenes/icono.png">
+    <link rel="icon" href="../imagenes/icono.png" />
     <!-- Estilo CSS -->
-    <link rel="stylesheet" href="../style/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
     <!-- Encabezado (Título e Img Logo) -->
     <header class="header">
-        <h1>Tienda Informática X</h1>
-        <div class="img-logo">
-            <a href="../index.html"><img class="logo" src="../imagenes/amd-intel.png" alt="icono-tienda"></a>
+      <h1>Tienda Informática X</h1>
+      <div class="img-logo">
+        <a href="../index.html"><img class="logo" src="../imagenes/amd-intel.png" alt="icono-tienda" /></a>
+      </div>
+      <div class="carrito-contenedor">
+        <button id="boton-carrito">
+          <img class="icono-ecomerce" src="../imagenes/carrito-de-compras2.png"></img><span id="contadorCarrito">0</span>
+        </button>
+
+        <div class="nav">
+          <button class="closebtn">Cerrar Carrito</button>
+          <nav id="div-carrito">
+        
+          </nav>
+          <p class="precioProducto">Total a Pagar: $ <span id="precioTotal">0</span></p>
         </div>
-    </header>
+
+      </div>
+      </header>
     <!-- Barra de Navegacion -->
     <nav class="nav-menu">
-        <ul class="ul-nav">
-            <li class="li-nav"><a class="nav-link" href="../index.html">Inicio</a></li>
-            <li class="li-nav"><a class="nav-link" href="armapc.html">Armá tu Pc</a></li>
-            <li class="li-nav"><a class="nav-link" href="productos.html">Productos</a></li>
-            <li class="li-nav"><a class="nav-link" href="quienessomos.html">Quienes Somos</a></li>
-            <li class="li-nav"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
-        </ul>
+      <ul class="ul-nav">
+        <li class="li-nav">
+          <a class="nav-link" href="../index.html">Inicio</a>
+        </li>
+        <li class="li-nav">
+          <a class="nav-link" href="armapc.html">Armá tu Pc</a>
+        </li>
+        <li class="li-nav">
+          <a class="nav-link" href="productos.html">Productos</a>
+        </li>
+        <li class="li-nav">
+          <a class="nav-link" href="quienessomos.html">Quienes Somos</a>
+        </li>
+        <li class="li-nav">
+          <a class="nav-link" href="contactanos.html">Contáctanos</a>
+        </li>
+      </ul>
     </nav>
-    <h2>CARRITO</h2>
-        <ul id="div-carrito">
-            
-        </ul>
+    
+    <ul></ul>
     <!-- SECCIÓN PRODUCTOS -->
-    <h2 class="h2-productos" >Lo elejimos para vos...</h2>
-    <section id="div-productos" class="container-productos">
-        <!-- PRODUCTO UNO -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/ryzen-5000.png" alt="microprocesador-amd-para-comprar">
-            <h3>Ryzen7 5700G</h3>
-            <p>4.2Ghz 8 Núcleos 16 Hilos</p>
-            <p><strong>$42.000</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO DOS -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/ryzen-5000.png" alt="microprocesador-amd-para-comprar">
-            <h3>Ryzen5 5600G</h3>
-            <p>4.1Ghz 6 Cores 12 Hilos</p>
-            <p><strong>$34.000</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO TRES -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/ryzen-5000.png" alt="microprocesador-amd-para-comprar">
-            <h3>Ryzen7 5800X</h3>
-            <p>4.7Ghz 8 Cores 16 Hilos</p>
-            <p><strong>$51.000</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO CUATRO -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/ryzen-5000.png" alt="microprocesador-amd-para-comprar">
-            <h3>Ryzen5 5600X</h3>
-            <p>4.3Ghz 6 Cores 12 Hilos</p>
-            <p><strong>$35.000</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO CINCO -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/ryzen-5000.png" alt="microprocesador-amd-para-comprar">
-            <h3>Ryzen9 5900X</h3>
-            <p>4.8Ghz 12 Cores 24 Hilos</p>
-            <p><strong>$65.000</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO SEIS -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/intel-12.png" alt="microprocesador-intel-para-comprar">
-            <h3>Intel i5 12400F</h3>
-            <p>4.4Ghz 6 Cores 12 Hilos</p>
-            <p><strong>$27.390</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO SIETE -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/intel-12.png" alt="microprocesador-intel-para-comprar">
-            <h3>Intel i5 12400</h3>
-            <p>4.4Ghz 6 Cores 12 Hilos</p>
-            <p><strong>$30.475</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO OCHO -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/intel-12.png" alt="microprocesador-intel-para-comprar">
-            <h3>Intel i7 12700KF</h3>
-            <p>5.0Ghz 8 Cores 16 Hilos</p>
-            <p><strong>$60.540</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO NUEVE -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/intel-12.png" alt="microprocesador-intel-para-comprar">
-            <h3>Intel i7 12700K</h3>
-            <p>5.0Ghz 8 Cores 18 Hilos</p>
-            <p><strong>$61.980</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-        <!-- PRODUCTO DIEZ -->
-        <article>
-            <img class="procesadores-img" src="../imagenes/intel-12.png" alt="microprocesador-intel-para-comprar">
-            <h3>Intel i9 12900K</h3>
-            <p>5.1Ghz 12 Cores 24 Hilos</p>
-            <p><strong>$97.500</strong></p>
-            <p class="envio">Envío gratis</p>
-            <a id="but-carrito" class="ver-mas" href="#">🛒</a>
-        </article>
-    </section>
+    <h2 class="h2-productos">Lo elejimos para vos...</h2>
+    <section id="div-productos" class="container-productos"></section>
     <!-- FOOTER -->
     <footer>
-        <div class="redes-footer">
-            <a href="https://www.instagram.com/german_kern/" target="_blank">
-                <img class="icon-footer" src="../imagenes/instagram.png" alt="icono-instagram">Instagram
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img class="icon-footer" src="../imagenes/facebook.png" alt="icono-facebook">Facebook
-            </a>
-            <a href="https://www.youtube.com" target="_blank">
-                <img class="icon-footer" src="../imagenes/youtube.png" alt="iconono-youtube">YouTube
-            </a>
-            <a href="https://github.com/germankern" target="_blank">
-                <img class="icon-footer" src="../imagenes/github.png" alt="iconono-github">GitHub
-            </a>
-        </div>
-        <!-- Link WhatsApp -->
-        <a class="wp-link" href="https://wa.me/+5493468599326">WhatsAppMe</a>
-        <p class="p-developer">Germán Kern Developer</p>
-        <h4>Copyright ©2022 | Todos los derechos reservados |</h4>
+      <div class="redes-footer">
+        <a href="https://www.instagram.com/german_kern/" target="_blank">
+          <img class="icon-footer" src="../imagenes/instagram.png" alt="icono-instagram" />Instagram
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <img class="icon-footer" src="../imagenes/facebook.png" alt="icono-facebook" />Facebook
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+          <img class="icon-footer" src="../imagenes/youtube.png" alt="iconono-youtube" />YouTube
+        </a>
+        <a href="https://github.com/germankern" target="_blank">
+          <img class="icon-footer" src="../imagenes/github.png" alt="iconono-github" />GitHub
+        </a>
+      </div>
+      <!-- Link WhatsApp -->
+      <a class="wp-link" href="https://wa.me/+5493468599326">WhatsAppMe</a>
+      <p class="p-developer">Germán Kern Developer</p>
+      <h4>Copyright ©2022 | Todos los derechos reservados |</h4>
     </footer>
     <!-- Link JS -->
     <script src="../js/productos.js"></script>
-</body>
+  </body>
 </html>
