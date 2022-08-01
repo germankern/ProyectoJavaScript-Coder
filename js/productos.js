@@ -134,8 +134,8 @@ function pintarProductosEnCarro() {
   const contadorCarrito = document.getElementById("contadorCarrito");
   contadorCarrito.innerText = productosEnCarro.length;
   // Precio Total productos en carro
-  const precioTotal = document.getElementsByClassName("precioTotal");
-  precioTotal.innerText = productosEnCarro.reduce((acc, producto) => acc + producto.precio, 0);
+  const precioTotal = document.getElementById("precioTotal");
+  precioTotal.innerText = productosEnCarro.reduce((acc, producto) => acc + parseInt(producto.precio), 0);
 }
 
 const button = document.querySelector("button");
