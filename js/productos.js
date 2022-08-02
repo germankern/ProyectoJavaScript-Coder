@@ -1,64 +1,23 @@
+class Producto {
+  constructor(id, nombre, precio, img) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.img = img;
+  }
+}
+
 const productos = [
-  {
-    id: 1,
-    nombre: "Ryzen 7 5700g",
-    precio: 42000,
-    img: "../imagenes/ryzen-5000.png",
-  },
-  {
-    id: 2,
-    nombre: "Ryzen 5 5600g",
-    precio: 34000,
-    img: "../imagenes/ryzen-5000.png",
-  },
-  {
-    id: 3,
-    nombre: "Ryzen 7 5800x",
-    precio: 51000,
-    img: "../imagenes/ryzen-5000.png",
-  },
-  {
-    id: 4,
-    nombre: "Ryzen 7 5600x",
-    precio: 35000,
-    img: "../imagenes/ryzen-5000.png",
-  },
-  {
-    id: 5,
-    nombre: "Ryzen 9 5900x",
-    precio: 65000,
-    img: "../imagenes/ryzen-5000.png",
-  },
-  {
-    id: 6,
-    nombre: "Intel i5 12400f",
-    precio: 27390,
-    img: "../imagenes/intel-12.png",
-  },
-  {
-    id: 7,
-    nombre: "Intel i5 12400",
-    precio: 30475,
-    img: "../imagenes/intel-12.png",
-  },
-  {
-    id: 8,
-    nombre: "Intel i7 12700kf",
-    precio: 60540,
-    img: "../imagenes/intel-12.png",
-  },
-  {
-    id: 9,
-    nombre: "Intel i7 12700k",
-    precio: 61980,
-    img: "../imagenes/intel-12.png",
-  },
-  {
-    id: 10,
-    nombre: "Intel i9 12900k",
-    precio: 97500,
-    img: "../imagenes/intel-12.png",
-  },
+  new Producto(1, "Ryzen 7 5700g", 42000, "../imagenes/ryzen-5000.png"),
+  new Producto(2, "Ryzen 5 5600g", 34000, "../imagenes/ryzen-5000.png"),
+  new Producto(3, "Ryzen 7 5800x", 51000, "../imagenes/ryzen-5000.png"),
+  new Producto(4, "Ryzen 7 5600x", 35000, "../imagenes/ryzen-5000.png"),
+  new Producto(5, "Ryzen 9 5900x", 65000, "../imagenes/ryzen-5000.png"),
+  new Producto(6, "Intel i5 12400f", 27390, "../imagenes/intel-12.png"),
+  new Producto(7, "Intel i5 12400", 30475, "../imagenes/intel-12.png"),
+  new Producto(8, "Intel i7 12700kf", 60540, "../imagenes/intel-12.png"),
+  new Producto(9, "Intel i7 12700k", 61980, "../imagenes/intel-12.png"),
+  new Producto(10, "Intel i9 12900k", 97500, "../imagenes/intel-12.png"),
 ];
 
 // Guardar el LocalStorage: Hacer Local Stoe.setItem luego de JSONparse y stringify
@@ -75,9 +34,7 @@ if (!aux) {
 function pintandoListado() {
   let aux = "";
   for (let i = 0; i < productos.length; i++) {
-    aux =
-      aux +
-      `<article>
+    aux += `<article>
         <img class="procesadores-img" src=${productos[i].img} alt="microprocesador-amd-para-comprar"/>
         <h3>${productos[i].nombre}</h3>
         <p>4.2Ghz 8 Núcleos 16 Hilos</p>
@@ -115,9 +72,7 @@ function borrarDelCarro(indice) {
 function pintarProductosEnCarro() {
   let aux = "";
   for (let i = 0; i < productosEnCarro.length; i++) {
-    aux =
-      aux +
-      `<div style="border: 3px solid green; display: flex; flex-direction: column; max-width: 120px; margin: 10px; text-align: center;">
+    aux += `<div style="border: 3px solid green; display: flex; flex-direction: column; max-width: 120px; margin: 10px; text-align: center;">
         <img class="procesadores-img" src=${productosEnCarro[i].img} alt="microprocesador-para-comprar"/>
                         <h3>${productosEnCarro[i].nombre}</h3>
                         <p>$ ${productosEnCarro[i].precio}</p>
