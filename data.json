@@ -1,0 +1,12 @@
+[
+    {"id": 1, "nombre": "Ryzen 5 5600g", "descripcion": "3.9Ghz 6 Núcleos 12 Hilos", "precio": 34000, "img": "../imagenes/ryzen-5000.png","cantidad": 1},
+    {"id": 2, "nombre": "Ryzen 5 5600x", "descripcion": "3.7Ghz 6 Núcleos 12 Hilos", "precio": 35000, "img": "../imagenes/ryzen-5000.png", "cantidad":1},
+    {"id": 3, "nombre": "Ryzen 7 5700g", "descripcion": "3.8Ghz 8 Núcleos 16 Hilos", "precio": 42000, "img": "../imagenes/ryzen-5000.png", "cantidad":1},
+    {"id": 4, "nombre": "Ryzen 7 5800x", "descripcion": "3.8Ghz 8 Núcleos 16 Hilos", "precio": 51000, "img": "../imagenes/ryzen-5000.png", "cantidad":1},
+    {"id": 5, "nombre": "Ryzen 9 5900x", "descripcion": "3.7Ghz 12 Núcleos 24 Hilos", "precio": 65000, "img": "../imagenes/ryzen-5000.png", "cantidad":1},
+    {"id": 6, "nombre": "Intel i5 12400f", "descripcion": "4.2Ghz 6 Núcleos 12 Hilos", "precio": 27390, "img": "../imagenes/intel-12.png", "cantidad":1},
+    {"id": 7, "nombre": "Intel i5 12400", "descripcion": "2.5Ghz 6 Núcleos 12 Hilos", "precio": 30475, "img": "../imagenes/intel-12.png", "cantidad":1},
+    {"id": 8, "nombre": "Intel i7 12700kf", "descripcion": "2.7Ghz 12 Núcleos 20 Hilos", "precio": 60540, "img": "../imagenes/intel-12.png", "cantidad":1},
+    {"id": 9, "nombre": "Intel i7 12700k", "descripcion": "4.2Ghz 12 Núcleos 20 Hilos", "precio": 61980, "img": "../imagenes/intel-12.png", "cantidad":1},
+    {"id": 10,"nombre":  "Intel i9 12900k", "descripcion": "4.2Ghz 16 Núcleos 24 Hilos", "precio": 97500, "img": "../imagenes/intel-12.png", "cantidad": 1}
+]

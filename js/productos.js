@@ -1,26 +1,26 @@
-class Producto {
-  constructor(id, nombre, descripcion, precio, img, cantidad) {
-    this.id = id;
-    this.nombre = nombre;
-    this.descripcion = descripcion;
-    this.precio = precio;
-    this.img = img;
-    this.cantidad = cantidad;
-  }
-}
+// class Producto {
+//   constructor(id, nombre, descripcion, precio, img, cantidad) {
+//     this.id = id;
+//     this.nombre = nombre;
+//     this.descripcion = descripcion;
+//     this.precio = precio;
+//     this.img = img;
+//     this.cantidad = cantidad;
+//   }
+// }
 
-const productos = [
-  new Producto(1, "Ryzen 5 5600g", "3.9Ghz 6 Núcleos 12 Hilos", 34000, "../imagenes/ryzen-5000.png", 1),
-  new Producto(2, "Ryzen 5 5600x", "3.7Ghz 6 Núcleos 12 Hilos", 35000, "../imagenes/ryzen-5000.png", 1),
-  new Producto(3, "Ryzen 7 5700g", "3.8Ghz 8 Núcleos 16 Hilos", 42000, "../imagenes/ryzen-5000.png", 1),
-  new Producto(4, "Ryzen 7 5800x", "3.8Ghz 8 Núcleos 16 Hilos", 51000, "../imagenes/ryzen-5000.png", 1),
-  new Producto(5, "Ryzen 9 5900x", "3.7Ghz 12 Núcleos 24 Hilos", 65000, "../imagenes/ryzen-5000.png", 1),
-  new Producto(6, "Intel i5 12400f", "4.2Ghz 6 Núcleos 12 Hilos", 27390, "../imagenes/intel-12.png", 1),
-  new Producto(7, "Intel i5 12400", "2.5Ghz 6 Núcleos 12 Hilos", 30475, "../imagenes/intel-12.png", 1),
-  new Producto(8, "Intel i7 12700kf", "2.7Ghz 12 Núcleos 20 Hilos", 60540, "../imagenes/intel-12.png", 1),
-  new Producto(9, "Intel i7 12700k", "4.2Ghz 12 Núcleos 20 Hilos", 61980, "../imagenes/intel-12.png", 1),
-  new Producto(10, "Intel i9 12900k", "4.2Ghz 16 Núcleos 24 Hilos", 97500, "../imagenes/intel-12.png", 1),
-];
+// const productos = [
+//   new Producto(1, "Ryzen 5 5600g", "3.9Ghz 6 Núcleos 12 Hilos", 34000, "../imagenes/ryzen-5000.png", 1),
+//   new Producto(2, "Ryzen 5 5600x", "3.7Ghz 6 Núcleos 12 Hilos", 35000, "../imagenes/ryzen-5000.png", 1),
+//   new Producto(3, "Ryzen 7 5700g", "3.8Ghz 8 Núcleos 16 Hilos", 42000, "../imagenes/ryzen-5000.png", 1),
+//   new Producto(4, "Ryzen 7 5800x", "3.8Ghz 8 Núcleos 16 Hilos", 51000, "../imagenes/ryzen-5000.png", 1),
+//   new Producto(5, "Ryzen 9 5900x", "3.7Ghz 12 Núcleos 24 Hilos", 65000, "../imagenes/ryzen-5000.png", 1),
+//   new Producto(6, "Intel i5 12400f", "4.2Ghz 6 Núcleos 12 Hilos", 27390, "../imagenes/intel-12.png", 1),
+//   new Producto(7, "Intel i5 12400", "2.5Ghz 6 Núcleos 12 Hilos", 30475, "../imagenes/intel-12.png", 1),
+//   new Producto(8, "Intel i7 12700kf", "2.7Ghz 12 Núcleos 20 Hilos", 60540, "../imagenes/intel-12.png", 1),
+//   new Producto(9, "Intel i7 12700k", "4.2Ghz 12 Núcleos 20 Hilos", 61980, "../imagenes/intel-12.png", 1),
+//   new Producto(10, "Intel i9 12900k", "4.2Ghz 16 Núcleos 24 Hilos", 97500, "../imagenes/intel-12.png", 1),
+// ];
 
 // Guardar el LocalStorage: Hacer Local Stoe.setItem luego de JSONparse y stringify
 let aux = localStorage.getItem("productosEnCarro");
@@ -34,9 +34,14 @@ if (!aux) {
 }
 
 function pintandoListado() {
-  let aux = "";
-  for (let i = 0; i < productos.length; i++) {
-    aux += `<article>
+  fetch("../data.json")
+    .then((respuestaInicial) => respuestaInicial.json())
+    .then((res) => {
+      const productos = res;
+
+      let aux = "";
+      for (let i = 0; i < productos.length; i++) {
+        aux += `<article>
         <img class="procesadores-img" src=${productos[i].img} alt="microprocesador-amd-para-comprar"/>
         <h3>${productos[i].nombre}</h3>
         <p>${productos[i].descripcion}</p>
@@ -48,9 +53,18 @@ function pintandoListado() {
           class="ver-mas"
           href="#">🛒</a>
       </article>`;
-  }
-  // Ejemplo de DOM (acá lo "pintamos" en el DOM)
-  document.getElementById("div-productos").innerHTML = aux;
+      }
+      // Ejemplo de DOM (acá lo "pintamos" en el DOM)
+      document.getElementById("div-productos").innerHTML = aux;
+    })
+    .catch((e) => {
+      // Mostrar Error de Fetch con SweetAlert
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: e,
+      });
+    });
 }
 pintandoListado();
 
