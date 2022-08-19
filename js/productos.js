@@ -23,8 +23,9 @@
 // ];
 
 // Guardar el LocalStorage: Hacer Local Stoe.setItem luego de JSONparse y stringify
-let aux = localStorage.getItem("productosEnCarro");
 let productosEnCarro;
+
+let aux = localStorage.getItem("productosEnCarro");
 
 if (!aux) {
   productosEnCarro = [];
@@ -48,7 +49,7 @@ function pintandoListado() {
         <p><strong>$${productos[i].precio}</strong></p>
         <p class="envio">Envío gratis</p>
         <a
-          onclick="agregarAlCarrito({img: '${productos[i].img}', nombre: '${productos[i].nombre}', precio: '${productos[i].precio}', cantidad: '${productos[i].cantidad}'})"
+          onclick="agregarAlCarrito({id: ${productos[i].id}, img: '${productos[i].img}', nombre: '${productos[i].nombre}', precio: ${productos[i].precio}, cantidad: ${productos[i].cantidad}})"
           id="but-carrito"
           class="ver-mas"
           href="#">🛒</a>
@@ -70,17 +71,33 @@ pintandoListado();
 
 // ----- Funciones del Carrito --------- //
 function agregarAlCarrito(objetoProducto) {
-  productosEnCarro.push(objetoProducto);
+  const existe = productosEnCarro.some((producto) => producto.id === objetoProducto.id);
 
+  if (existe) {
+    const prod = productosEnCarro.map((producto) => {
+      if (producto.id === objetoProducto.id) {
+        producto.cantidad++;
+      }
+      Swal.fire({
+        title: "Excelente",
+        text: "Agregado al Carrito",
+        icon: "success",
+        timer: 800,
+        width: 400,
+      });
+    });
+  } else {
+    productosEnCarro.push(objetoProducto);
+    Swal.fire({
+      title: "Excelente",
+      text: "Agregado al Carrito",
+      icon: "success",
+      timer: 800,
+      width: 400,
+    });
+  }
   localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
   pintarProductosEnCarro();
-  Swal.fire({
-    title: "Excelente",
-    text: "Agregado al Carrito",
-    icon: "success",
-    timer: 800,
-    width: 400,
-  });
 }
 
 // Borrar un item del carro
@@ -109,7 +126,7 @@ function pintarProductosEnCarro() {
                         <p>$ ${productosEnCarro[i].precio}</p>
 
                         <p>Cantidad: <span id="cantidad">${productosEnCarro[i].cantidad}</span></p>
-
+                        
                         <button 
                           onclick="borrarDelCarro(${i})" 
                           style="cursor: pointer; color: white; background-color: red; padding: 3px;">Eliminar 🗑️
@@ -121,12 +138,15 @@ function pintarProductosEnCarro() {
   document.getElementById("div-carrito").innerHTML = aux;
   // Contador de Productos en Carrito
   const contadorCarrito = document.getElementById("contadorCarrito");
-  contadorCarrito.innerText = productosEnCarro.length;
+  contadorCarrito.innerText = productosEnCarro.reduce((acc, producto) => acc + parseInt(producto.cantidad), 0);
   // Precio Total productos en carro
   const precioTotal = document.getElementById("precioTotal");
-  precioTotal.innerText = productosEnCarro.reduce((acc, producto) => acc + parseInt(producto.precio), 0);
+  precioTotal.innerText = productosEnCarro.reduce(
+    (acc, producto) => acc + parseInt(producto.precio * producto.cantidad),
+    0
+  );
 }
-
+pintarProductosEnCarro();
 // Modal del Carrito
 const button = document.querySelector("button");
 const closebtn = document.querySelector(".closebtn");
