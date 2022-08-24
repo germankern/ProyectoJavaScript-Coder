@@ -111,10 +111,28 @@ function borrarDelCarro(indice) {
 // Vaciar todo el carrito de compras
 const botonVaciar = document.getElementById("vaciarCarrito");
 botonVaciar.addEventListener("click", () => {
-  productosEnCarro.length = 0;
-  localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
-  pintarProductosEnCarro();
+  if ((result = true)) {
+    Swal.fire({
+      title: "Estas Seguro?",
+      text: "Deseas eliminar los productos del carrito?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminar!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Cerrando Modal
+        nav.classList.remove("show");
+        productosEnCarro.length = 0;
+        localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
+        pintarProductosEnCarro();
+        Swal.fire("Eliminado!", "Tu carrito está vacio.", "success");
+      }
+    });
+  }
 });
+
 // ------------------------------- //
 
 function pintarProductosEnCarro() {
@@ -124,9 +142,7 @@ function pintarProductosEnCarro() {
             <img class="procesadores-img" src=${productosEnCarro[i].img} alt="microprocesador-para-comprar"/>
                         <h3>${productosEnCarro[i].nombre}</h3>
                         <p>$ ${productosEnCarro[i].precio}</p>
-
                         <p>Cantidad: <span id="cantidad">${productosEnCarro[i].cantidad}</span></p>
-                        
                         <button 
                           onclick="borrarDelCarro(${i})" 
                           style="cursor: pointer; color: white; background-color: red; padding: 3px;">Eliminar 🗑️
@@ -153,9 +169,17 @@ const closebtn = document.querySelector(".closebtn");
 const nav = document.querySelector(".nav");
 
 button.onclick = () => {
-  nav.classList.add("show");
+  if (productosEnCarro.length >= 1) {
+    nav.classList.add("show");
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Carrito Vacio",
+      text: "Aún no tienes productos",
+      timer: 1800,
+    });
+  }
 };
-
 closebtn.onclick = () => {
   nav.classList.remove("show");
 };
