@@ -8,5 +8,5 @@
     {"id": 7, "nombre": "Intel i5 12400", "descripcion": "2.5Ghz 6 Núcleos 12 Hilos", "precio": 30475, "img": "../imagenes/intel-12.png", "cantidad":1},
     {"id": 8, "nombre": "Intel i7 12700kf", "descripcion": "2.7Ghz 12 Núcleos 20 Hilos", "precio": 60540, "img": "../imagenes/intel-12.png", "cantidad":1},
     {"id": 9, "nombre": "Intel i7 12700k", "descripcion": "4.2Ghz 12 Núcleos 20 Hilos", "precio": 61980, "img": "../imagenes/intel-12.png", "cantidad":1},
-    {"id": 10,"nombre":  "Intel i9 12900k", "descripcion": "4.2Ghz 16 Núcleos 24 Hilos", "precio": 97500, "img": "../imagenes/intel-12.png", "cantidad": 1}
+    {"id": 10,"nombre": "Intel i9 12900k", "descripcion": "4.2Ghz 16 Núcleos 24 Hilos", "precio": 97500, "img": "../imagenes/intel-12.png", "cantidad": 1}
 ]
