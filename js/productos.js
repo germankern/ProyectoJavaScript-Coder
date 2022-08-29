@@ -172,7 +172,7 @@ btnBuscar.addEventListener("click", () => {
     .then((respuestaInicial) => respuestaInicial.json())
     .then((res) => {
       let inputBuscar = document.getElementById("buscar").value;
-      console.log(res);
+
       const produc = res.filter((p) => {
         return p.nombre.toLowerCase().includes(inputBuscar.toLowerCase());
       });
